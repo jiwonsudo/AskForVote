@@ -7,12 +7,13 @@
 
 import UIKit
 
+var imgSelected = UIImage(named: "EmptyProfileIcon.png") //선택된 프로필 이미지
+
 class ProfileVC: UIViewController {
     
     @IBOutlet var imgViewProfile: UIImageView!
     
     let imagePicker = UIImagePickerController() //이미지 선택 기능
-    var imgSelected = UIImage(named: "EmptyProfileIcon.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class ProfileVC: UIViewController {
         
         imagePicker.delegate = self
         
-        imgViewProfile.image = imgSelected
+        imgViewProfile.image = imgSelected //뷰 시작 시 이미지 = imgSelected
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
         self.presentingViewController?.dismiss(animated: true)
@@ -53,8 +54,9 @@ class ProfileVC: UIViewController {
 extension ProfileVC : UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.editedImage]{ //편집된 이미지를 imgProgfile의 이미지로 설정
-            imgViewProfile.image = image as? UIImage
+        if let image = info[UIImagePickerController.InfoKey.editedImage]{ //편집된 이미지를 image에 저장
+            imgViewProfile.image = image as? UIImage //
+            imgSelected = image as? UIImage //image를 imgSelected에 저장
             
         }
         dismiss(animated: true, completion: nil)

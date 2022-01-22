@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRA-Oq-n8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="-197"/>
+            <point key="canvasLocation" x="1817" y="-241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1kX-6L-pc2">
@@ -173,14 +173,22 @@
                                             <constraint firstAttribute="height" constant="35" id="vwV-oy-fQN"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-Zy-Z3X">
+                                        <rect key="frame" x="145" y="470" width="60.333333333333343" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                        <connections>
+                                            <action selector="btnLogin:" destination="hTn-LO-QcX" eventType="touchUpInside" id="AeN-j9-MWV"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 실패 시 경고라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9x-y3-8tm">
-                                        <rect key="frame" x="95.000000000000014" y="470" width="160.33333333333337" height="20.333333333333314"/>
+                                        <rect key="frame" x="95.000000000000014" y="531" width="160.33333333333337" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-RH-hR3">
-                                        <rect key="frame" x="44.666666666666686" y="520.33333333333337" width="261" height="20.333333333333371"/>
+                                        <rect key="frame" x="56.666666666666686" y="581.33333333333337" width="237" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-wr-phG">
                                                 <rect key="frame" x="0.0" y="0.0" width="164.33333333333334" height="20.333333333333332"/>
@@ -189,9 +197,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-ut-fkD">
-                                                <rect key="frame" x="164.33333333333331" y="0.0" width="96.666666666666686" height="20.333333333333332"/>
+                                                <rect key="frame" x="164.33333333333331" y="0.0" width="72.666666666666686" height="20.333333333333332"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="회원가입하기"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
                                                 <connections>
                                                     <segue destination="gsJ-QH-S2P" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="BQu-Oz-lc2"/>
                                                 </connections>
@@ -199,7 +207,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kDe-D6-dc1">
-                                        <rect key="frame" x="75" y="570.66666666666663" width="200" height="151.33333333333337"/>
+                                        <rect key="frame" x="75" y="631.66666666666663" width="200" height="90.333333333333371"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -236,10 +244,15 @@
                             <constraint firstItem="Oxk-qX-jdU" firstAttribute="leading" secondItem="cob-bd-jgt" secondAttribute="leading" id="xy7-kl-GGJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblLoginAlert" destination="o9x-y3-8tm" id="6zr-qZ-Y2P"/>
+                        <outlet property="tfID" destination="lHf-wC-lqI" id="KUB-Tb-4Fi"/>
+                        <outlet property="tfPW" destination="B80-M0-qGv" id="4pL-m2-TEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOX-pj-BiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414.4927536231885" y="981.69642857142856"/>
+            <point key="canvasLocation" x="-1068" y="858"/>
         </scene>
         <!--Profile-->
         <scene sceneID="A9r-yD-YPi">
@@ -315,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Px-0U-75p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687.69230769230762" y="981.042654028436"/>
+            <point key="canvasLocation" x="-340" y="858"/>
         </scene>
         <!--Setting-->
         <scene sceneID="5fq-Ml-2d3">
@@ -331,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CN-P1-fvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="455"/>
+            <point key="canvasLocation" x="1818" y="412"/>
         </scene>
         <!--Search-->
         <scene sceneID="ZMk-f3-yHh">
@@ -369,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHx-PA-mkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="1168"/>
+            <point key="canvasLocation" x="422" y="1180"/>
         </scene>
         <!--MyQuestions-->
         <scene sceneID="eEH-5I-oIR">
@@ -407,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcs-8J-Toz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="1168"/>
+            <point key="canvasLocation" x="1818" y="1180"/>
         </scene>
         <!--NotificationCenter-->
         <scene sceneID="FF9-oM-643">
@@ -445,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYN-j5-c3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1168"/>
+            <point key="canvasLocation" x="1117" y="1180"/>
         </scene>
         <!--Register-->
         <scene sceneID="4lo-3e-JGC">
@@ -482,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgY-dm-I1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414" y="1675"/>
+            <point key="canvasLocation" x="-1068" y="1552"/>
         </scene>
     </scenes>
     <resources>

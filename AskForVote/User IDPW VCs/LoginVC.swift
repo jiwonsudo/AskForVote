@@ -8,7 +8,11 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
+    @IBOutlet var lblLoginAlert: UILabel!
+    @IBOutlet var tfID: UITextField!
+    @IBOutlet var tfPW: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +20,10 @@ class LoginVC: UIViewController {
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
         self.presentingViewController?.dismiss(animated: true)
+    }
+    @IBAction func btnLogin(_ sender: UIButton) {
+        let inputID = tfID.text
+        let inputPW = tfPW.text
     }
     
 

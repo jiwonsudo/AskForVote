@@ -14,7 +14,7 @@ class MainMenuVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func btnViewProfile(_ sender: UIBarButtonItem) {
-        let isLogin : Bool = true // 테스트 코드: 초기 로그인 상태
+        let isLogin : Bool = false // 테스트 코드: 초기 로그인 상태
         if isLogin == false {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {return}
             nextVC.modalPresentationStyle = .fullScreen
