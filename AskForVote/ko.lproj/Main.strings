@@ -1,0 +1,63 @@
+
+/* Class = "UINavigationItem"; title = "질문 작성하기"; ObjectID = "0g5-uX-F8s"; */
+"0g5-uX-F8s.title" = "질문 작성하기";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "1Ed-3y-X0g"; */
+"1Ed-3y-X0g.title" = "Item";
+
+/* Class = "UIViewController"; title = "MyQuestions"; ObjectID = "5ra-Yt-Ahe"; */
+"5ra-Yt-Ahe.title" = "MyQuestions";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "7Fv-er-Zlh"; */
+"7Fv-er-Zlh.title" = "Item";
+
+/* Class = "UIViewController"; title = "MainMenu"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "MainMenu";
+
+/* Class = "UIViewController"; title = "NotificationCenter"; ObjectID = "IjL-dJ-YT6"; */
+"IjL-dJ-YT6.title" = "NotificationCenter";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "QJh-5N-X2v"; */
+"QJh-5N-X2v.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "질문 / 사용자 검색하기"; ObjectID = "Z5S-yc-bNk"; */
+"Z5S-yc-bNk.title" = "질문 / 사용자 검색하기";
+
+/* Class = "UIViewController"; title = "Writing"; ObjectID = "bTZ-VG-aw5"; */
+"bTZ-VG-aw5.title" = "Writing";
+
+/* Class = "UIViewController"; title = "Profile"; ObjectID = "cAR-eK-DG6"; */
+"cAR-eK-DG6.title" = "Profile";
+
+/* Class = "UIViewController"; title = "Register"; ObjectID = "gsJ-QH-S2P"; */
+"gsJ-QH-S2P.title" = "Register";
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "hTn-LO-QcX"; */
+"hTn-LO-QcX.title" = "Login";
+
+/* Class = "UINavigationItem"; title = "메인화면"; ObjectID = "hd2-42-nVN"; */
+"hd2-42-nVN.title" = "메인화면";
+
+/* Class = "UIViewController"; title = "Setting"; ObjectID = "hfp-KI-tmn"; */
+"hfp-KI-tmn.title" = "Setting";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "lig-3B-LCl"; */
+"lig-3B-LCl.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "mG5-Ak-rVA"; */
+"mG5-Ak-rVA.title" = "Item";
+
+/* Class = "UIViewController"; title = "Search"; ObjectID = "nc8-ZT-i8c"; */
+"nc8-ZT-i8c.title" = "Search";
+
+/* Class = "UINavigationItem"; title = "내 질문함"; ObjectID = "neZ-CW-Ffn"; */
+"neZ-CW-Ffn.title" = "내 질문함";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "p0s-uz-6LA"; */
+"p0s-uz-6LA.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "설정"; ObjectID = "tV1-xa-Z3n"; */
+"tV1-xa-Z3n.title" = "설정";
+
+/* Class = "UINavigationItem"; title = "알림"; ObjectID = "tsl-ZO-kW7"; */
+"tsl-ZO-kW7.title" = "알림";
