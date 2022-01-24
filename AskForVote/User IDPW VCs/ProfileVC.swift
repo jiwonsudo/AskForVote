@@ -9,27 +9,37 @@ import UIKit
 
 var imgSelected = UIImage(named: "EmptyProfileIcon.png") //선택된 프로필 이미지
 
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController, SendUserInfoProtocol {
     
     @IBOutlet var imgViewProfile: UIImageView!
     @IBOutlet var lblUserName: UILabel! // 유저명 표시 기능
     @IBOutlet var btnLogOut: UIButton!
     
     let imagePicker = UIImagePickerController() //이미지 선택 기능
+    var userName = "User Name"
+    
+    func sendUserID(userIDInfo: String) {
+         userName = userIDInfo
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnLogOut.setTitleColor(.red, for: .normal)
+        /*
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {return}
+        nextVC.userInfoDelegate = self
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        lblUserName.text = userName
+        */ //실행 안 됨. 추가조치필요
         
+        imagePicker.delegate = self
+        
+        btnLogOut.setTitleColor(.red, for: .normal)
         imgViewProfile.layer.borderWidth = 1
         imgViewProfile.layer.masksToBounds = false
         imgViewProfile.layer.borderColor = UIColor.lightGray.cgColor
         imgViewProfile.layer.cornerRadius = imgViewProfile.frame.height/2
         imgViewProfile.clipsToBounds = true
-        
-        imagePicker.delegate = self
-        
         imgViewProfile.image = imgSelected //뷰 시작 시 이미지 = imgSelected
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
