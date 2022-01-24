@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRA-Oq-n8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="-197"/>
+            <point key="canvasLocation" x="1817" y="-241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1kX-6L-pc2">
@@ -173,14 +173,22 @@
                                             <constraint firstAttribute="height" constant="35" id="vwV-oy-fQN"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-Zy-Z3X">
+                                        <rect key="frame" x="145" y="470" width="60.333333333333343" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                        <connections>
+                                            <action selector="btnLogin:" destination="hTn-LO-QcX" eventType="touchUpInside" id="AeN-j9-MWV"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 실패 시 경고라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9x-y3-8tm">
-                                        <rect key="frame" x="95.000000000000014" y="470" width="160.33333333333337" height="20.333333333333314"/>
+                                        <rect key="frame" x="95.000000000000014" y="531" width="160.33333333333337" height="20.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-RH-hR3">
-                                        <rect key="frame" x="44.666666666666686" y="520.33333333333337" width="261" height="20.333333333333371"/>
+                                        <rect key="frame" x="56.666666666666686" y="581.33333333333337" width="237" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-wr-phG">
                                                 <rect key="frame" x="0.0" y="0.0" width="164.33333333333334" height="20.333333333333332"/>
@@ -189,9 +197,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-ut-fkD">
-                                                <rect key="frame" x="164.33333333333331" y="0.0" width="96.666666666666686" height="20.333333333333332"/>
+                                                <rect key="frame" x="164.33333333333331" y="0.0" width="72.666666666666686" height="20.333333333333332"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="회원가입하기"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
                                                 <connections>
                                                     <segue destination="gsJ-QH-S2P" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="BQu-Oz-lc2"/>
                                                 </connections>
@@ -199,7 +207,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kDe-D6-dc1">
-                                        <rect key="frame" x="75" y="570.66666666666663" width="200" height="151.33333333333337"/>
+                                        <rect key="frame" x="75" y="631.66666666666663" width="200" height="90.333333333333371"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -236,10 +244,15 @@
                             <constraint firstItem="Oxk-qX-jdU" firstAttribute="leading" secondItem="cob-bd-jgt" secondAttribute="leading" id="xy7-kl-GGJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblLoginAlert" destination="o9x-y3-8tm" id="6zr-qZ-Y2P"/>
+                        <outlet property="tfID" destination="lHf-wC-lqI" id="KUB-Tb-4Fi"/>
+                        <outlet property="tfPW" destination="B80-M0-qGv" id="4pL-m2-TEA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOX-pj-BiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414.4927536231885" y="981.69642857142856"/>
+            <point key="canvasLocation" x="-1068" y="858"/>
         </scene>
         <!--Profile-->
         <scene sceneID="A9r-yD-YPi">
@@ -264,8 +277,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gdz-2P-oJt">
-                                <rect key="frame" x="20" y="88" width="350" height="270"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gdz-2P-oJt">
+                                <rect key="frame" x="20" y="88" width="350" height="440"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-EX-q2P">
                                         <rect key="frame" x="120" y="0.0" width="110" height="20"/>
@@ -274,14 +287,14 @@
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VcV-hC-YAJ">
-                                        <rect key="frame" x="100" y="50" width="150" height="150"/>
+                                        <rect key="frame" x="100" y="40" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="X9m-Yd-hzH"/>
                                             <constraint firstAttribute="height" constant="150" id="bex-og-dOs"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVh-SL-8xC">
-                                        <rect key="frame" x="75" y="230" width="200" height="40"/>
+                                        <rect key="frame" x="75" y="210" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Qwl-jj-Nt6"/>
                                             <constraint firstAttribute="width" constant="200" id="c4q-Ts-DWK"/>
@@ -292,9 +305,49 @@
                                             <action selector="btnPickImage:" destination="cAR-eK-DG6" eventType="touchUpInside" id="7BD-dK-geA"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojv-aC-UCf">
+                                        <rect key="frame" x="0.0" y="270" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6AY-PC-svS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-LA-O8Y">
+                                        <rect key="frame" x="0.0" y="320" width="350" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xm1-rA-Ho6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="기본 프로필 사진으로 변경"/>
+                                        <connections>
+                                            <action selector="btnInitialProfile:" destination="cAR-eK-DG6" eventType="touchUpInside" id="fUm-mr-Pvp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PE-TW-cLL">
+                                        <rect key="frame" x="0.0" y="390" width="350" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7bY-iv-eQc"/>
+                                            <constraint firstAttribute="height" constant="50" id="KRB-P9-J0R"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="로그아웃">
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnLogOut:" destination="cAR-eK-DG6" eventType="touchUpInside" id="pa7-dP-J45"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ojv-aC-UCf" secondAttribute="trailing" id="B1B-fk-oST"/>
+                                    <constraint firstAttribute="trailing" secondItem="ekr-LA-O8Y" secondAttribute="trailing" id="HBU-TA-sDx"/>
                                     <constraint firstItem="kaq-EX-q2P" firstAttribute="leading" secondItem="gdz-2P-oJt" secondAttribute="leading" constant="120" id="Jlm-HX-Fy8"/>
+                                    <constraint firstItem="ekr-LA-O8Y" firstAttribute="leading" secondItem="gdz-2P-oJt" secondAttribute="leading" id="Uht-Jn-sQR"/>
+                                    <constraint firstAttribute="trailing" secondItem="2PE-TW-cLL" secondAttribute="trailing" id="bYi-nz-aKy"/>
+                                    <constraint firstItem="ojv-aC-UCf" firstAttribute="leading" secondItem="gdz-2P-oJt" secondAttribute="leading" id="faT-HQ-osF"/>
+                                    <constraint firstItem="2PE-TW-cLL" firstAttribute="leading" secondItem="gdz-2P-oJt" secondAttribute="leading" id="z4T-d5-3En"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -310,12 +363,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnLogOut" destination="2PE-TW-cLL" id="p5u-wG-65U"/>
                         <outlet property="imgViewProfile" destination="VcV-hC-YAJ" id="WvI-AI-Z4v"/>
+                        <outlet property="lblUserName" destination="ojv-aC-UCf" id="jyS-sG-Tlt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Px-0U-75p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687.69230769230762" y="981.042654028436"/>
+            <point key="canvasLocation" x="-340" y="858"/>
         </scene>
         <!--Setting-->
         <scene sceneID="5fq-Ml-2d3">
@@ -331,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CN-P1-fvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="455"/>
+            <point key="canvasLocation" x="1818" y="412"/>
         </scene>
         <!--Search-->
         <scene sceneID="ZMk-f3-yHh">
@@ -369,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHx-PA-mkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="1168"/>
+            <point key="canvasLocation" x="422" y="1180"/>
         </scene>
         <!--MyQuestions-->
         <scene sceneID="eEH-5I-oIR">
@@ -407,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcs-8J-Toz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="1168"/>
+            <point key="canvasLocation" x="1818" y="1180"/>
         </scene>
         <!--NotificationCenter-->
         <scene sceneID="FF9-oM-643">
@@ -445,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYN-j5-c3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1168"/>
+            <point key="canvasLocation" x="1117" y="1180"/>
         </scene>
         <!--Register-->
         <scene sceneID="4lo-3e-JGC">
@@ -482,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgY-dm-I1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414" y="1675"/>
+            <point key="canvasLocation" x="-1068" y="1552"/>
         </scene>
     </scenes>
     <resources>
@@ -497,6 +552,9 @@
         <image name="tray.full" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
