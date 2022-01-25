@@ -13,16 +13,16 @@ class MainMenuVC: UIViewController, SendLoginInfoProtocol {
     
     var testImage = UIImage(named: "EmptyProfileIcon")
     
-    func sendLoginInfo(loginInfo: Bool) {
-        self.isLogin = loginInfo
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func sendLoginInfo(loginInfo: Bool) {
+        self.isLogin = loginInfo
+    }
+    
     @IBAction func btnViewProfile(_ sender: UIBarButtonItem) {
-        //let isLogin : Bool = true // 테스트 코드: 초기 로그인 상태
         if isLogin == false {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {return}
             nextVC.loginInfoDelegate = self
