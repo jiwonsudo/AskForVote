@@ -7,8 +7,6 @@
 
 import UIKit
 
-var imgSelected = UIImage(named: "EmptyProfileIcon.png") //선택된 프로필 이미지
-
 class ProfileVC: UIViewController {
     
     @IBOutlet var imgViewProfile: UIImageView!
@@ -19,19 +17,20 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblUserName.text = userName
+        
+        imagePicker.delegate = self
         
         btnLogOut.setTitleColor(.red, for: .normal)
-        
         imgViewProfile.layer.borderWidth = 1
         imgViewProfile.layer.masksToBounds = false
         imgViewProfile.layer.borderColor = UIColor.lightGray.cgColor
         imgViewProfile.layer.cornerRadius = imgViewProfile.frame.height/2
         imgViewProfile.clipsToBounds = true
-        
-        imagePicker.delegate = self
-        
         imgViewProfile.image = imgSelected //뷰 시작 시 이미지 = imgSelected
     }
+
+    
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
         self.presentingViewController?.dismiss(animated: true)
     }
@@ -48,6 +47,9 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func btnLogOut(_ sender: Any) { //로그아웃 구현 필요
+        isLogin = false
+        lblUserName.text = "USERNAME"
+        self.presentingViewController?.dismiss(animated: true)
     }
     
 }

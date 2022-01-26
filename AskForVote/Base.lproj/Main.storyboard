@@ -181,14 +181,14 @@
                                             <action selector="btnLogin:" destination="hTn-LO-QcX" eventType="touchUpInside" id="AeN-j9-MWV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 실패 시 경고라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9x-y3-8tm">
-                                        <rect key="frame" x="95.000000000000014" y="531" width="160.33333333333337" height="20.333333333333371"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9x-y3-8tm">
+                                        <rect key="frame" x="150" y="531" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-RH-hR3">
-                                        <rect key="frame" x="56.666666666666686" y="581.33333333333337" width="237" height="20.333333333333371"/>
+                                        <rect key="frame" x="56.666666666666686" y="611" width="237" height="20.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 회원이 아니신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-wr-phG">
                                                 <rect key="frame" x="0.0" y="0.0" width="164.33333333333334" height="20.333333333333332"/>
@@ -207,7 +207,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kDe-D6-dc1">
-                                        <rect key="frame" x="75" y="631.66666666666663" width="200" height="90.333333333333371"/>
+                                        <rect key="frame" x="75" y="661.33333333333337" width="200" height="60.666666666666629"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
