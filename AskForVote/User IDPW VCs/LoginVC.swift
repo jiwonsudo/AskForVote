@@ -7,16 +7,12 @@
 
 import UIKit
 
-var serverID = ""
-var serverPW = ""
-
 class LoginVC: UIViewController {
     
     @IBOutlet var lblLoginAlert: UILabel!
     @IBOutlet var tfID: UITextField!
     @IBOutlet var tfPW: UITextField!
     
-    var loginInfoDelegate : SendLoginInfoProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +28,8 @@ class LoginVC: UIViewController {
         serverPW = "test" //TESTCODE 로그인용
         
         if inputID == serverID && inputPW == serverPW {
-            loginInfoDelegate?.sendLoginInfo(loginInfo: true)
-            userName = inputID // TESTCODE 로그인용
+            isLogin = true // isLogin을 true로 변경
+            userName = inputID // userName을 입력된 ID로 변경
             lblLoginAlert.text = "로그인에 성공했습니다. 메인화면으로 이동합니다."
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
                 self.presentingViewController?.dismiss(animated: true)
@@ -46,6 +42,3 @@ class LoginVC: UIViewController {
     }
 }
 
-protocol SendLoginInfoProtocol {
-    func sendLoginInfo(loginInfo : Bool)
-}

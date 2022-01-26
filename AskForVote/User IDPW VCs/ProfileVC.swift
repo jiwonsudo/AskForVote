@@ -7,9 +7,6 @@
 
 import UIKit
 
-var imgSelected = UIImage(named: "EmptyProfileIcon.png") //선택된 프로필 이미지
-var userName = "USERNAME"
-
 class ProfileVC: UIViewController {
     
     @IBOutlet var imgViewProfile: UIImageView!
@@ -17,7 +14,6 @@ class ProfileVC: UIViewController {
     @IBOutlet var btnLogOut: UIButton!
     
     let imagePicker = UIImagePickerController() //이미지 선택 기능
-    var loginInfoDelegate : SendLoginInfoProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +47,9 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func btnLogOut(_ sender: Any) { //로그아웃 구현 필요
+        isLogin = false
         lblUserName.text = "USERNAME"
+        self.presentingViewController?.dismiss(animated: true)
     }
     
 }
