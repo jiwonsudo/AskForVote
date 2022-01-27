@@ -27,7 +27,7 @@ class LoginVC: UIViewController {
         serverID = "test" //TESTCODE 로그인용
         serverPW = "test" //TESTCODE 로그인용
         
-        if inputID == serverID && inputPW == serverPW {
+        if (inputID == serverID) && (inputPW == serverPW) {
             isLogin = true // isLogin을 true로 변경
             userName = inputID // userName을 입력된 ID로 변경
             lblLoginAlert.text = "로그인에 성공했습니다. 메인화면으로 이동합니다."

@@ -81,18 +81,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ANu-bX-jTv">
-                                <rect key="frame" x="16" y="108" width="358" height="450"/>
+                                <rect key="frame" x="16" y="108" width="358" height="520"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="여기에 질문을 입력하세요. 질문은 짧을수록 좋아요!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8r-wk-NcC">
-                                        <rect key="frame" x="4.6666666666666572" y="0.0" width="349" height="200"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-lP-xQU">
+                                        <rect key="frame" x="10" y="0.0" width="338" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="Oda-Yf-omh"/>
+                                            <constraint firstAttribute="height" constant="130" id="BbJ-Gh-JNX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="첫 번째 선택지를 입력하세요.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66q-j9-0Yf">
+                                        <rect key="frame" x="10" y="150" width="338" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zFc-U2-VnY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="두 번째 선택지를 입력하세요.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EAf-JV-ePF">
+                                        <rect key="frame" x="10" y="220" width="338" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bS9-mb-5qo"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="er0-U2-0Vl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpE-wB-Xow">
-                                        <rect key="frame" x="10" y="220" width="338" height="70"/>
+                                        <rect key="frame" x="10" y="290" width="338" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(익명 게시판에 글이 등록됩니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7G-bTm">
                                                 <rect key="frame" x="15" y="36.666666666666686" width="221" height="20.333333333333329"/>
@@ -127,10 +146,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28B-xZ-s68">
-                                        <rect key="frame" x="10" y="310" width="338" height="70"/>
+                                        <rect key="frame" x="10" y="380" width="338" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Off 시 질문이 검색되지 않습니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-Hs-zFV">
-                                                <rect key="frame" x="15" y="36.666666666666686" width="235" height="20.333333333333329"/>
+                                                <rect key="frame" x="15" y="36.666666666666629" width="235" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -162,7 +181,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-w3-gJW">
-                                        <rect key="frame" x="104" y="400" width="150" height="50"/>
+                                        <rect key="frame" x="104" y="470" width="150" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="TwD-qJ-mzl"/>
                                             <constraint firstAttribute="height" constant="50" id="aAh-mb-9CI"/>
@@ -175,10 +194,16 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EAf-JV-ePF" secondAttribute="trailing" constant="10" id="F8j-oJ-6P1"/>
+                                    <constraint firstItem="yHE-lP-xQU" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="Iur-RQ-g91"/>
+                                    <constraint firstAttribute="trailing" secondItem="66q-j9-0Yf" secondAttribute="trailing" constant="10" id="K3G-2b-hpE"/>
                                     <constraint firstItem="28B-xZ-s68" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="Vnw-t9-kOs"/>
                                     <constraint firstAttribute="trailing" secondItem="LpE-wB-Xow" secondAttribute="trailing" constant="10" id="XVg-GW-t5z"/>
                                     <constraint firstAttribute="trailing" secondItem="28B-xZ-s68" secondAttribute="trailing" constant="10" id="ZUh-Et-kA2"/>
+                                    <constraint firstItem="66q-j9-0Yf" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="b4R-7k-0M4"/>
+                                    <constraint firstAttribute="trailing" secondItem="yHE-lP-xQU" secondAttribute="trailing" constant="10" id="ctZ-jo-F1k"/>
                                     <constraint firstItem="LpE-wB-Xow" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="dGG-ec-8ZE"/>
+                                    <constraint firstItem="EAf-JV-ePF" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="ySf-qx-aNU"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -190,9 +215,11 @@
                             <constraint firstItem="qUu-M4-RhJ" firstAttribute="trailing" secondItem="ANu-bX-jTv" secondAttribute="trailing" constant="16" id="a5t-b6-ewH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="질문 작성하기" id="0g5-uX-F8s"/>
+                    <navigationItem key="navigationItem" title="투표 작성하기" id="0g5-uX-F8s"/>
                     <connections>
-                        <outlet property="tfQuestionBox" destination="w8r-wk-NcC" id="bq0-nB-p8T"/>
+                        <outlet property="tfFirstQ" destination="66q-j9-0Yf" id="ZWi-MY-9D0"/>
+                        <outlet property="tfSecondQ" destination="EAf-JV-ePF" id="XiM-cv-qb3"/>
+                        <outlet property="tvTitle" destination="yHE-lP-xQU" id="gAe-K3-EKM"/>
                         <outlet property="viewAnonymousQ" destination="LpE-wB-Xow" id="lkO-0D-cig"/>
                         <outlet property="viewSearchQ" destination="28B-xZ-s68" id="Ot4-KC-ChS"/>
                     </connections>
@@ -663,6 +690,9 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="tray.full" catalog="system" width="128" height="88"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
