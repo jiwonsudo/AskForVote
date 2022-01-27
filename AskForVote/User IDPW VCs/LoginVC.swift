@@ -34,10 +34,8 @@ class LoginVC: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
                 self.presentingViewController?.dismiss(animated: true)
             }
-        } else if inputID == serverID && inputPW != serverPW {
-            lblLoginAlert.text = "비밀번호가 틀렸습니다."
         } else {
-            lblLoginAlert.text = "가입되지 않은 ID입니다."
+            lblLoginAlert.text = "ID 또는 비밀번호가 틀렸습니다."
         }
     }
 }

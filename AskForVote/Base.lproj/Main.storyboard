@@ -79,14 +79,127 @@
                     <view key="view" contentMode="scaleToFill" id="fOZ-O8-W2p">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ANu-bX-jTv">
+                                <rect key="frame" x="16" y="108" width="358" height="450"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="여기에 질문을 입력하세요. 질문은 짧을수록 좋아요!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8r-wk-NcC">
+                                        <rect key="frame" x="4.6666666666666572" y="0.0" width="349" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Oda-Yf-omh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpE-wB-Xow">
+                                        <rect key="frame" x="10" y="220" width="338" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(익명 게시판에 글이 등록됩니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7G-bTm">
+                                                <rect key="frame" x="15" y="36.666666666666686" width="221" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="익명으로 질문하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpu-W2-Utg">
+                                                <rect key="frame" x="15.000000000000007" y="12.999999999999998" width="121.66666666666669" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mJx-yj-4py">
+                                                <rect key="frame" x="274" y="20" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchAnonymousQ:" destination="bTZ-VG-aw5" eventType="valueChanged" id="iIf-TM-Dxk"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="kh8-7G-bTm" firstAttribute="leading" secondItem="LpE-wB-Xow" secondAttribute="leading" constant="15" id="4xx-fE-gYK"/>
+                                            <constraint firstAttribute="height" constant="70" id="FDf-hP-Oly"/>
+                                            <constraint firstAttribute="bottom" secondItem="kh8-7G-bTm" secondAttribute="bottom" constant="13" id="N19-oM-0dW"/>
+                                            <constraint firstAttribute="trailing" secondItem="mJx-yj-4py" secondAttribute="trailing" constant="15" id="TGR-DZ-l8B"/>
+                                            <constraint firstItem="mJx-yj-4py" firstAttribute="top" secondItem="LpE-wB-Xow" secondAttribute="top" constant="20" id="Xus-Cn-ggX"/>
+                                            <constraint firstItem="Hpu-W2-Utg" firstAttribute="leading" secondItem="LpE-wB-Xow" secondAttribute="leading" constant="15" id="bPb-y7-oAP"/>
+                                            <constraint firstItem="Hpu-W2-Utg" firstAttribute="top" secondItem="LpE-wB-Xow" secondAttribute="top" constant="13" id="kXc-5Z-ZIg"/>
+                                            <constraint firstItem="mJx-yj-4py" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh8-7G-bTm" secondAttribute="trailing" constant="8" symbolic="YES" id="maP-66-tBj"/>
+                                            <constraint firstItem="mJx-yj-4py" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hpu-W2-Utg" secondAttribute="trailing" constant="8" symbolic="YES" id="roz-Rb-4aa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28B-xZ-s68">
+                                        <rect key="frame" x="10" y="310" width="338" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Off 시 질문이 검색되지 않습니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-Hs-zFV">
+                                                <rect key="frame" x="15" y="36.666666666666686" width="235" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문 검색 허용하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2U-HD-uoU">
+                                                <rect key="frame" x="15.000000000000007" y="12.999999999999998" width="125.66666666666669" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-O5-GdP">
+                                                <rect key="frame" x="274" y="20" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchSearchQ:" destination="bTZ-VG-aw5" eventType="valueChanged" id="aGB-a1-uyV"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SGx-O5-GdP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7jl-Hs-zFV" secondAttribute="trailing" constant="8" symbolic="YES" id="33T-5P-JlO"/>
+                                            <constraint firstItem="k2U-HD-uoU" firstAttribute="top" secondItem="28B-xZ-s68" secondAttribute="top" constant="13" id="3ar-aI-oQc"/>
+                                            <constraint firstAttribute="trailing" secondItem="SGx-O5-GdP" secondAttribute="trailing" constant="15" id="ErK-sh-t3M"/>
+                                            <constraint firstItem="7jl-Hs-zFV" firstAttribute="leading" secondItem="28B-xZ-s68" secondAttribute="leading" constant="15" id="Y0P-Hj-Aco"/>
+                                            <constraint firstItem="k2U-HD-uoU" firstAttribute="leading" secondItem="28B-xZ-s68" secondAttribute="leading" constant="15" id="bNg-DC-JRO"/>
+                                            <constraint firstItem="SGx-O5-GdP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k2U-HD-uoU" secondAttribute="trailing" constant="8" symbolic="YES" id="o2v-Zy-Ywi"/>
+                                            <constraint firstAttribute="height" constant="70" id="pvo-6o-gXO"/>
+                                            <constraint firstItem="SGx-O5-GdP" firstAttribute="top" secondItem="28B-xZ-s68" secondAttribute="top" constant="20" id="xu9-jN-e1H"/>
+                                            <constraint firstAttribute="bottom" secondItem="7jl-Hs-zFV" secondAttribute="bottom" constant="13" id="yob-Lm-yaI"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvK-w3-gJW">
+                                        <rect key="frame" x="104" y="400" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="TwD-qJ-mzl"/>
+                                            <constraint firstAttribute="height" constant="50" id="aAh-mb-9CI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="질문 등록하기"/>
+                                        <connections>
+                                            <action selector="btnPostQ:" destination="bTZ-VG-aw5" eventType="touchUpInside" id="9rJ-34-Xee"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="28B-xZ-s68" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="Vnw-t9-kOs"/>
+                                    <constraint firstAttribute="trailing" secondItem="LpE-wB-Xow" secondAttribute="trailing" constant="10" id="XVg-GW-t5z"/>
+                                    <constraint firstAttribute="trailing" secondItem="28B-xZ-s68" secondAttribute="trailing" constant="10" id="ZUh-Et-kA2"/>
+                                    <constraint firstItem="LpE-wB-Xow" firstAttribute="leading" secondItem="ANu-bX-jTv" secondAttribute="leading" constant="10" id="dGG-ec-8ZE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qUu-M4-RhJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ANu-bX-jTv" firstAttribute="leading" secondItem="qUu-M4-RhJ" secondAttribute="leading" constant="16" id="YrO-ud-p4b"/>
+                            <constraint firstItem="ANu-bX-jTv" firstAttribute="top" secondItem="qUu-M4-RhJ" secondAttribute="top" constant="20" id="Zof-hN-yUR"/>
+                            <constraint firstItem="qUu-M4-RhJ" firstAttribute="trailing" secondItem="ANu-bX-jTv" secondAttribute="trailing" constant="16" id="a5t-b6-ewH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="질문 작성하기" id="0g5-uX-F8s"/>
+                    <connections>
+                        <outlet property="tfQuestionBox" destination="w8r-wk-NcC" id="bq0-nB-p8T"/>
+                        <outlet property="viewAnonymousQ" destination="LpE-wB-Xow" id="lkO-0D-cig"/>
+                        <outlet property="viewSearchQ" destination="28B-xZ-s68" id="Ot4-KC-ChS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRA-Oq-n8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="-241"/>
+            <point key="canvasLocation" x="1816.9230769230769" y="-241.70616113744074"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1kX-6L-pc2">

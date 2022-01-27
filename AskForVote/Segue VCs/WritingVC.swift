@@ -9,21 +9,38 @@ import UIKit
 
 class WritingVC: UIViewController {
 
+    @IBOutlet weak var viewAnonymousQ: UIView!
+    @IBOutlet weak var viewSearchQ: UIView!
+    @IBOutlet var tfQuestionBox: UITextField!
+    
+    var isAnonymousQ : Bool = false
+    var isSearchQ : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewAnonymousQ.layer.cornerRadius = 15 //view 코너 라운딩 설정
+        viewSearchQ.layer.cornerRadius = 15
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func switchAnonymousQ(_ sender: UISwitch) {
+        if sender.isOn {
+            isAnonymousQ = true
+        } else {
+            isAnonymousQ = false
+        }
     }
-    */
-
+    
+    @IBAction func switchSearchQ(_ sender: UISwitch) {
+        if sender.isOn {
+            isSearchQ = true
+        } else {
+            isSearchQ = false
+        }
+    }
+    @IBAction func btnPostQ(_ sender: UIButton) {
+        // FU : 서버로 tfQuestionBox의 글 정보 전달
+        // FU : 서버로 익명질문여부(isAnonymous) 정보 전달
+        // FU : 서버로 질문검색여부(isSearchQ) 정보 전달
+    }
+    
 }
