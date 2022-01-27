@@ -88,7 +88,7 @@ class WritingVC: UIViewController, UITextViewDelegate {
         if isTitleEmpty == false && isTfQEmpty == false {
             let agreeNoChangeAlert = UIAlertController(title: "이대로 등록하시겠습니까?", message: "한번 작성한 투표는 삭제할 수 있으나, 수정은 불가능합니다.", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default) { (action) in // ok 누를 시 실행할 함수 입력
-                // FU : 서버로 tfFirstQ, tfSecondQ의 두 가지 정보 전달, 서버로 tfTitleBox의 글 정보 전달, 서버로 익명질문여부(isAnonymous) 정보 전달, FU : 서버로 질문검색여부(isSearchQ) 정보 전달하기 구현
+                // FU : 서버로 tfFirstQ, tfSecondQ의 두 가지 정보 전달, 서버로 tfTitleBox의 글 정보 전달, 서버로 익명질문여부(isAnonymous) 정보 전달, FU : 서버로 질문검색여부(isSearchQ) 정보전달하기 구현
                 self.presentingViewController?.dismiss(animated: true)
                 }
             let noAction = UIAlertAction(title: "취소", style: .default) { (action) in }
