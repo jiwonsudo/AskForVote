@@ -13,6 +13,9 @@ class LoginVC: UIViewController {
     @IBOutlet var tfID: UITextField!
     @IBOutlet var tfPW: UITextField!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +30,15 @@ class LoginVC: UIViewController {
         serverID = "test" //TESTCODE 로그인용
         serverPW = "test" //TESTCODE 로그인용
         
-        if inputID == serverID && inputPW == serverPW {
+        if (inputID == serverID) && (inputPW == serverPW) {
             isLogin = true // isLogin을 true로 변경
             userName = inputID // userName을 입력된 ID로 변경
             lblLoginAlert.text = "로그인에 성공했습니다. 메인화면으로 이동합니다."
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
                 self.presentingViewController?.dismiss(animated: true)
             }
-        } else if inputID == serverID && inputPW != serverPW {
-            lblLoginAlert.text = "비밀번호가 틀렸습니다."
         } else {
-            lblLoginAlert.text = "가입되지 않은 ID입니다."
+            lblLoginAlert.text = "ID 또는 비밀번호가 틀렸습니다."
         }
     }
 }

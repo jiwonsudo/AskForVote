@@ -1,13 +1,13 @@
 //
-//  SettingVC.swift
+//  ResignVC.swift
 //  AskForVote
 //
-//  Created by 정지원 on 2022/01/20.
+//  Created by 정지원 on 2022/01/28.
 //
 
 import UIKit
 
-class SettingVC: UIViewController {
+class ResignVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

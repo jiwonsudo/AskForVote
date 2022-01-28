@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		872AB05B279AD2EA00FE9766 /* EmptyProfileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 872AB05A279AD2EA00FE9766 /* EmptyProfileIcon.png */; };
 		873FA2052799B06900DF3727 /* TestLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873FA2042799B06900DF3727 /* TestLogo.png */; };
+		876D7A6027A3AE2100A522B3 /* SetVoteAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */; };
 		877802C627991A9B00627CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877802C827991A9B00627CA7 /* InfoPlist.strings */; };
 		877802CD27991CEF00627CA7 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877802CC27991CEF00627CA7 /* WritingVC.swift */; };
 		877802CF27991D1100627CA7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877802CE27991D1100627CA7 /* SearchVC.swift */; };
@@ -24,11 +25,15 @@
 		8796D5C4279858A700C66436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C2279858A700C66436 /* Main.storyboard */; };
 		8796D5C6279858A800C66436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C5279858A800C66436 /* Assets.xcassets */; };
 		8796D5C9279858A800C66436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C7279858A800C66436 /* LaunchScreen.storyboard */; };
+		87D5E87C27A3CA7500E8199A /* ResignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87B27A3CA7500E8199A /* ResignVC.swift */; };
+		87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87D27A3CA8000E8199A /* FAQVC.swift */; };
+		87D5E88027A3CA8900E8199A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87F27A3CA8900E8199A /* ReportVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		872AB05A279AD2EA00FE9766 /* EmptyProfileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmptyProfileIcon.png; sourceTree = "<group>"; };
 		873FA2042799B06900DF3727 /* TestLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestLogo.png; sourceTree = "<group>"; };
+		876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVoteAlertVC.swift; sourceTree = "<group>"; };
 		877802C727991A9B00627CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		877802C927991AD300627CA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		877802CA27991AD300627CA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		8796D5C5279858A800C66436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8796D5C8279858A800C66436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8796D5CA279858A800C66436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87D5E87B27A3CA7500E8199A /* ResignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignVC.swift; sourceTree = "<group>"; };
+		87D5E87D27A3CA8000E8199A /* FAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
+		87D5E87F27A3CA8900E8199A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +94,7 @@
 			children = (
 				8796D5C0279858A700C66436 /* MainMenuVC.swift */,
 				877802D227991EEC00627CA7 /* NCCenterVC.swift */,
-				877802D027991EBD00627CA7 /* SettingVC.swift */,
+				876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */,
 				877802CC27991CEF00627CA7 /* WritingVC.swift */,
 				877802D427991F2100627CA7 /* MyQVC.swift */,
 				877802CE27991D1100627CA7 /* SearchVC.swift */,
@@ -113,11 +121,12 @@
 		8796D5BB279858A700C66436 /* AskForVote */ = {
 			isa = PBXGroup;
 			children = (
-				872AB05C279AD2F000FE9766 /* Image */,
-				877802C827991A9B00627CA7 /* InfoPlist.strings */,
 				8796D5BC279858A700C66436 /* AppDelegate.swift */,
 				8796D5BE279858A700C66436 /* SceneDelegate.swift */,
+				877802C827991A9B00627CA7 /* InfoPlist.strings */,
+				872AB05C279AD2F000FE9766 /* Image */,
 				877802DD27991F9900627CA7 /* Segue VCs */,
+				87D5E88127A3CA9F00E8199A /* Setting VCs */,
 				877802DC27991F7700627CA7 /* User IDPW VCs */,
 				8796D5C2279858A700C66436 /* Main.storyboard */,
 				8796D5C5279858A800C66436 /* Assets.xcassets */,
@@ -125,6 +134,17 @@
 				8796D5CA279858A800C66436 /* Info.plist */,
 			);
 			path = AskForVote;
+			sourceTree = "<group>";
+		};
+		87D5E88127A3CA9F00E8199A /* Setting VCs */ = {
+			isa = PBXGroup;
+			children = (
+				877802D027991EBD00627CA7 /* SettingVC.swift */,
+				87D5E87F27A3CA8900E8199A /* ReportVC.swift */,
+				87D5E87D27A3CA8000E8199A /* FAQVC.swift */,
+				87D5E87B27A3CA7500E8199A /* ResignVC.swift */,
+			);
+			path = "Setting VCs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				877802CD27991CEF00627CA7 /* WritingVC.swift in Sources */,
+				87D5E88027A3CA8900E8199A /* ReportVC.swift in Sources */,
+				87D5E87C27A3CA7500E8199A /* ResignVC.swift in Sources */,
 				877802D127991EBD00627CA7 /* SettingVC.swift in Sources */,
+				876D7A6027A3AE2100A522B3 /* SetVoteAlertVC.swift in Sources */,
 				877802CF27991D1100627CA7 /* SearchVC.swift in Sources */,
 				8796D5C1279858A700C66436 /* MainMenuVC.swift in Sources */,
 				8796D5BD279858A700C66436 /* AppDelegate.swift in Sources */,
+				87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */,
 				877802D727991F4C00627CA7 /* LoginVC.swift in Sources */,
 				877802D327991EEC00627CA7 /* NCCenterVC.swift in Sources */,
 				877802D527991F2100627CA7 /* MyQVC.swift in Sources */,
