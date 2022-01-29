@@ -7,21 +7,19 @@
 
 import UIKit
 
+var profileSearchable = true // 서버로 유저 프로필 검색가능여부 전송
+
 class SettingVC: UIViewController {
 
     @IBOutlet var viewAgreeProfileSearchable: UIView!
-    @IBOutlet var viewAgreeDarkMode: UIView!
     @IBOutlet var viewSetVoteAlert: UIView!
     
-    var profileSearchable = true
-    var onDarkmode = true
     var onVoteAlert = false
     var numVoteAlert = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewAgreeDarkMode.layer.cornerRadius = 15
         viewAgreeProfileSearchable.layer.cornerRadius = 15
         viewSetVoteAlert.layer.cornerRadius = 15
 
@@ -31,9 +29,7 @@ class SettingVC: UIViewController {
     @IBAction func switchProfileSearchable(_ sender: UISwitch) {
         if sender.isOn {profileSearchable = true} else {profileSearchable = false}
     }
-    @IBAction func switchDarkMode(_ sender: UISwitch) {
-        if sender.isOn {onDarkmode = true} else {onDarkmode = false}
-    }
+    
     @IBAction func btnSetVoteAlert(_ sender: UIButton) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SetVoteAlertVC") as? SetVoteAlertVC else {return}
         nextVC.modalPresentationStyle = .popover
