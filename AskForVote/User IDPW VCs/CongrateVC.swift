@@ -1,13 +1,13 @@
 //
-//  FAQVC.swift
+//  CongrateVC.swift
 //  AskForVote
 //
-//  Created by 정지원 on 2022/01/28.
+//  Created by 정지원 on 2022/01/29.
 //
 
 import UIKit
 
-class FAQVC: UIViewController {
+class CongrateVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

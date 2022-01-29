@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var lblLoginAlert: UILabel!
     @IBOutlet var tfID: UITextField!
@@ -19,7 +19,15 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tfID.delegate = self
+        self.tfPW.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
         self.presentingViewController?.dismiss(animated: true)
     }
@@ -27,12 +35,8 @@ class LoginVC: UIViewController {
         let inputID = tfID.text ?? ""
         let inputPW = tfPW.text ?? ""
         
-        serverID = "test" //TESTCODE 로그인용
-        serverPW = "test" //TESTCODE 로그인용
-        
-        if (inputID == serverID) && (inputPW == serverPW) {
-            isLogin = true // isLogin을 true로 변경
-            userName = inputID // userName을 입력된 ID로 변경
+        if (inputID == "test") && (inputPW == "test") { // FutureUpdate 서버에서 inputID와 inputPW가 일치하는 것이 있는지 확인
+            isLogin = true
             lblLoginAlert.text = "로그인에 성공했습니다. 메인화면으로 이동합니다."
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
                 self.presentingViewController?.dismiss(animated: true)
