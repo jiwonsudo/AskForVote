@@ -10,7 +10,7 @@ import UIKit
 var numToAlert = 10 // 서버로 넘겨줄 알림 설정 수 정보
 var setVoteAlert = false // 서버로 넘겨줄 알림 설정 여부 정보
 
-class SetVoteAlertVC: UIViewController {
+class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var viewLabelborder: UIView!
     @IBOutlet var tfNumToChange: UITextField!
@@ -31,6 +31,8 @@ class SetVoteAlertVC: UIViewController {
         
         viewSetVoteAlert.layer.cornerRadius = 15
         
+        self.tfNumToChange.delegate = self
+        
         if setVoteAlert == true {
             switchVoteAlert.setOn(true, animated: false)
             lblNumToAlert.text = String(numToAlert)
@@ -38,6 +40,11 @@ class SetVoteAlertVC: UIViewController {
             switchVoteAlert.setOn(false, animated: false)
             lblNumToAlert.text = "꺼짐"
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
@@ -64,6 +71,8 @@ class SetVoteAlertVC: UIViewController {
                 lblNumToAlert.text = String(numToAlert)
                 tfNumToChange.text = ""
                 
+                self.view.endEditing(true)
+                
                 let alertSetSucess = UIAlertController(title: "알림", message: "성공적으로 반영되었습니다.", preferredStyle: .alert)
                 alertSetSucess.addAction(actionOK)
                 present(alertSetSucess, animated: true, completion: nil)
@@ -74,19 +83,26 @@ class SetVoteAlertVC: UIViewController {
                 setVoteAlert = false
                 switchVoteAlert.setOn(false, animated: false)
                 
+                self.view.endEditing(true)
+                
                 let alertZeroOrChar = UIAlertController(title: "경고", message: "입력창에 0 또는 숫자가 입력되어 알림이 '꺼짐'으로 설정되었습니다. 올바르게 입력해 주십시오.", preferredStyle: UIAlertController.Style.alert)
                 alertZeroOrChar.addAction(actionOK)
                 present(alertZeroOrChar, animated: true, completion: nil)
             } else {
+                self.view.endEditing(true)
+                tfNumToChange.text = ""
                 let alertNumToBig = UIAlertController(title: "경고", message: "변경할 수가 너무 큽니다. 알림을 받으시려면 1 ~ 500 사이의 수를 입력하세요.", preferredStyle: UIAlertController.Style.alert)
                 alertNumToBig.addAction(actionOK)
                 present(alertNumToBig, animated: true, completion: nil)
             }
         } else if setVoteAlert == true && tfNumToChange.text == "" {
+            self.view.endEditing(true)
             let alertFieldEmpty = UIAlertController(title: "경고", message: "입력창이 빈 상태입니다. 숫자를 입력하고 '변경' 버튼을 누르십시오.", preferredStyle: .alert)
             alertFieldEmpty.addAction(actionOK)
             present(alertFieldEmpty, animated: true, completion: nil)
         } else {
+            self.view.endEditing(true)
+            tfNumToChange.text = ""
             let alertOffAlert = UIAlertController(title: "경고", message: "투표 수 알림이 꺼져 있습니다. 투표 수를 설정하려면 투표 수 알림을 켠 상태로 설정하십시오.", preferredStyle: UIAlertController.Style.alert)
             alertOffAlert.addAction(actionOK)
             present(alertOffAlert, animated: true, completion: nil)
