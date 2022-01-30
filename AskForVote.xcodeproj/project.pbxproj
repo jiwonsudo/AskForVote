@@ -25,7 +25,6 @@
 		8796D5C4279858A700C66436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C2279858A700C66436 /* Main.storyboard */; };
 		8796D5C6279858A800C66436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C5279858A800C66436 /* Assets.xcassets */; };
 		8796D5C9279858A800C66436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C7279858A800C66436 /* LaunchScreen.storyboard */; };
-		879F3C3927A524AC00517A34 /* CongrateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F3C3827A524AC00517A34 /* CongrateVC.swift */; };
 		879F3C3B27A5737200517A34 /* ServerVarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F3C3A27A5737200517A34 /* ServerVarTest.swift */; };
 		87D5E87C27A3CA7500E8199A /* ResignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87B27A3CA7500E8199A /* ResignVC.swift */; };
 		87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87D27A3CA8000E8199A /* FAQVC.swift */; };
@@ -56,7 +55,6 @@
 		8796D5C5279858A800C66436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8796D5C8279858A800C66436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8796D5CA279858A800C66436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		879F3C3827A524AC00517A34 /* CongrateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongrateVC.swift; sourceTree = "<group>"; };
 		879F3C3A27A5737200517A34 /* ServerVarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerVarTest.swift; path = AskForVote/ServerVarTest.swift; sourceTree = SOURCE_ROOT; };
 		87D5E87B27A3CA7500E8199A /* ResignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignVC.swift; sourceTree = "<group>"; };
 		87D5E87D27A3CA8000E8199A /* FAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				877802D627991F4C00627CA7 /* LoginVC.swift */,
 				877802DA27991F6900627CA7 /* ProfileVC.swift */,
 				877802D827991F5F00627CA7 /* RegisterVC.swift */,
-				879F3C3827A524AC00517A34 /* CongrateVC.swift */,
 			);
 			path = "User IDPW VCs";
 			sourceTree = "<group>";
@@ -236,7 +233,6 @@
 				876D7A6027A3AE2100A522B3 /* SetVoteAlertVC.swift in Sources */,
 				877802CF27991D1100627CA7 /* SearchVC.swift in Sources */,
 				8796D5C1279858A700C66436 /* MainMenuVC.swift in Sources */,
-				879F3C3927A524AC00517A34 /* CongrateVC.swift in Sources */,
 				8796D5BD279858A700C66436 /* AppDelegate.swift in Sources */,
 				87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */,
 				877802D727991F4C00627CA7 /* LoginVC.swift in Sources */,

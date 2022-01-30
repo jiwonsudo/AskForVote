@@ -18,6 +18,8 @@ class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var viewSetVoteAlert: UIView!
     @IBOutlet var switchVoteAlert: UISwitch!
     
+    let maxTFLength = 5
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
         }
@@ -44,6 +46,21 @@ class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { // textfield 입력 길이 수 제한
+
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if isBackSpace == -92 {
+                return true
+            }
+        }
+
+        guard textField.text!.count < maxTFLength else {
+            return false
+        }
         return true
     }
     

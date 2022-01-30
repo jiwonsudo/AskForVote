@@ -41,8 +41,8 @@ class ProfileVC: UIViewController {
  self.present(imagePicker,animated: true, completion: nil)
     }
     
-    @IBAction func btnChangeID(_ sender: UIButton) {
-        // FutureUpdate 유저명 겹치는지 체크 후 userID 변경
+    @IBAction func btnChangeUserID(_ sender: UIButton) {
+        // FutureUpdate 유저ID 겹치는지 체크 후 userID 변경
     }
     
     @IBAction func btnInitialProfile(_ sender: UIButton) {

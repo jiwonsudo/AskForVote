@@ -29,4 +29,4 @@ var isLogin : Bool = false // 로그인 상태 (실제 전역변수 지정)
 var loginedID = "test" // 앱에 저장되는 로그인된 ID
 var loginedPW = "test" // DB에 있는 ID 중 선택된 로그인된 유저의 PW
 var loginedSex = "남성" // 로그인한 유저의 성별 정보 : 남성, 여성, 기타
-var loginedAge = "10대" // 유저의 연령대 정보 : ["10대", "20대", "30대", "40대", "50대", "60대", "70대", "80대 또는 그 이상"]
+var loginedAge = "10대" // 유저의 연령대 정보 : ["10대", "20대", "30대", "40대", "50대", "60대 또는 그 이상"]
