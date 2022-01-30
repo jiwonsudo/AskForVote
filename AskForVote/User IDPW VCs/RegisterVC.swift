@@ -60,14 +60,14 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func IDCheck(ID : String?) -> Bool { // ID 입력 정규식에 맞는지 체크
         guard ID != nil else { return false }
-        let IDReg = "[a-z0-9_]{3,20}" // ID 정규식
+        let IDReg = "[a-z0-9_]{4,20}" // ID 정규식
         let pred = NSPredicate(format:"SELF MATCHES %@", IDReg)
         return pred.evaluate(with: ID)
     }
     
     func PWCheck(PW : String?) -> Bool { // PW 입력 정규식에 맞는지 체크
         guard PW != nil else { return false }
-        let PWReg = "(?=.*[0-9])(?=.*[a-z])[A-Za-z0-9`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]{7,20}" // PW 정규식
+        let PWReg = "(?=.*[0-9])(?=.*[a-z])[A-Za-z0-9`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]{8,20}" // PW 정규식
         let pred = NSPredicate(format: "SELF MATCHES %@", PWReg)
         return pred.evaluate(with: PW)
     }
