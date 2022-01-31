@@ -10,6 +10,7 @@
 		872AB05B279AD2EA00FE9766 /* EmptyProfileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 872AB05A279AD2EA00FE9766 /* EmptyProfileIcon.png */; };
 		873FA2052799B06900DF3727 /* TestLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 873FA2042799B06900DF3727 /* TestLogo.png */; };
 		876D7A6027A3AE2100A522B3 /* SetVoteAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */; };
+		876FE17427A7DF2E0085F9FF /* IDChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876FE17327A7DF2E0085F9FF /* IDChangeVC.swift */; };
 		877802C627991A9B00627CA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 877802C827991A9B00627CA7 /* InfoPlist.strings */; };
 		877802CD27991CEF00627CA7 /* WritingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877802CC27991CEF00627CA7 /* WritingVC.swift */; };
 		877802CF27991D1100627CA7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877802CE27991D1100627CA7 /* SearchVC.swift */; };
@@ -35,6 +36,7 @@
 		872AB05A279AD2EA00FE9766 /* EmptyProfileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmptyProfileIcon.png; sourceTree = "<group>"; };
 		873FA2042799B06900DF3727 /* TestLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestLogo.png; sourceTree = "<group>"; };
 		876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVoteAlertVC.swift; sourceTree = "<group>"; };
+		876FE17327A7DF2E0085F9FF /* IDChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDChangeVC.swift; sourceTree = "<group>"; };
 		877802C727991A9B00627CA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		877802C927991AD300627CA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		877802CA27991AD300627CA7 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				877802D627991F4C00627CA7 /* LoginVC.swift */,
 				877802DA27991F6900627CA7 /* ProfileVC.swift */,
 				877802D827991F5F00627CA7 /* RegisterVC.swift */,
+				876FE17327A7DF2E0085F9FF /* IDChangeVC.swift */,
 			);
 			path = "User IDPW VCs";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */,
 				877802D727991F4C00627CA7 /* LoginVC.swift in Sources */,
 				877802D327991EEC00627CA7 /* NCCenterVC.swift in Sources */,
+				876FE17427A7DF2E0085F9FF /* IDChangeVC.swift in Sources */,
 				877802D527991F2100627CA7 /* MyQVC.swift in Sources */,
 				8796D5BF279858A700C66436 /* SceneDelegate.swift in Sources */,
 				877802DB27991F6900627CA7 /* ProfileVC.swift in Sources */,

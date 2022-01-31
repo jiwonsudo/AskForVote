@@ -329,7 +329,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9x-y3-8tm">
                                         <rect key="frame" x="150" y="531" width="50" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -477,6 +477,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btnChangeUserID:" destination="cAR-eK-DG6" eventType="touchUpInside" id="BCs-qy-jxT"/>
+                                            <segue destination="y3q-F3-yMZ" kind="modal" id="dno-n3-XIw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PE-TW-cLL">
@@ -1210,15 +1211,120 @@
                         <outlet property="lblIDCheck" destination="pTu-vP-HMn" id="9hf-aU-JsY"/>
                         <outlet property="lblPWCheck" destination="DrI-kM-aKy" id="DRl-cN-2tF"/>
                         <outlet property="lblPWDoubleCheck" destination="UQM-qw-r2e" id="03E-3D-tXL"/>
-                        <outlet property="tfRegisterID" destination="979-ii-TcT" id="YlE-LQ-hEn"/>
-                        <outlet property="tfRegisterPW" destination="caw-ki-Xie" id="ts5-F6-x8U"/>
-                        <outlet property="tfRegisterPWDoubleCheck" destination="Olf-PZ-SJC" id="0QF-j2-dPW"/>
+                        <outlet property="tfIDtoRegister" destination="979-ii-TcT" id="X8G-wv-Shz"/>
+                        <outlet property="tfPWtoDoubleCheck" destination="Olf-PZ-SJC" id="zZR-zz-xeK"/>
+                        <outlet property="tfPWtoRegister" destination="caw-ki-Xie" id="zn2-O4-PSg"/>
                         <outlet property="viewRegisterBorder" destination="aS6-Uu-OtC" id="W6L-Gt-lsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgY-dm-I1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1073.8461538461538" y="1601.6587677725117"/>
+        </scene>
+        <!--IDChange-->
+        <scene sceneID="ijG-NS-a9X">
+            <objects>
+                <viewController storyboardIdentifier="IDChangeVC" title="IDChange" id="y3q-F3-yMZ" customClass="IDChangeVC" customModule="AskForVote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uIW-7e-Xo2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NN5-5j-ffs">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MED-wX-w1B"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="사용자명(ID) 변경" id="UgF-LF-iGe">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="5I2-QD-4DK">
+                                            <connections>
+                                                <action selector="btnGoBack:" destination="y3q-F3-yMZ" id="7LB-FR-91j"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1T-5t-gqf">
+                                <rect key="frame" x="10" y="84" width="370" height="101.33333333333331"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sDe-hx-ILm">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="변경할 사용자명 입력.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ew3-Y0-Jo9">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7DR-ez-C8m">
+                                                <rect key="frame" x="320" y="1.6666666666666643" width="50" height="47"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="kFd-GV-bI0"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="l3Y-vQ-mpq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="변경할 사용자명을 입력하세요. 취소하려면 뒤로가기를 누르세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSr-d5-Nrn">
+                                        <rect key="frame" x="0.0" y="59.999999999999993" width="370" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4~20자리, 영어 소문자, 숫자, 언더바(_) 사용 가능" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i5-gK-O0C">
+                                        <rect key="frame" x="0.0" y="85.666666666666657" width="370" height="15.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sDe-hx-ILm" firstAttribute="leading" secondItem="t1T-5t-gqf" secondAttribute="leading" id="NEJ-oM-w9W"/>
+                                    <constraint firstItem="PSr-d5-Nrn" firstAttribute="leading" secondItem="t1T-5t-gqf" secondAttribute="leading" id="Zpe-js-mIG"/>
+                                    <constraint firstAttribute="trailing" secondItem="sDe-hx-ILm" secondAttribute="trailing" id="kaJ-4J-ZbK"/>
+                                    <constraint firstAttribute="trailing" secondItem="PSr-d5-Nrn" secondAttribute="trailing" id="o7R-Ib-Bcd"/>
+                                    <constraint firstItem="2i5-gK-O0C" firstAttribute="leading" secondItem="t1T-5t-gqf" secondAttribute="leading" id="qTE-pz-4Ji"/>
+                                    <constraint firstAttribute="trailing" secondItem="2i5-gK-O0C" secondAttribute="trailing" id="uIO-Uo-LyB"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U15-sI-xMP">
+                                <rect key="frame" x="150" y="215.33333333333334" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HJ1-k6-A7c"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="변경하기"/>
+                                <connections>
+                                    <action selector="btnChangeID:" destination="y3q-F3-yMZ" eventType="touchUpInside" id="gSa-Pf-cQ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tZT-mJ-gsS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NN5-5j-ffs" firstAttribute="leading" secondItem="tZT-mJ-gsS" secondAttribute="leading" id="0Ng-75-RY7"/>
+                            <constraint firstItem="U15-sI-xMP" firstAttribute="top" secondItem="t1T-5t-gqf" secondAttribute="bottom" constant="30" id="9H3-Bd-NzI"/>
+                            <constraint firstItem="t1T-5t-gqf" firstAttribute="leading" secondItem="tZT-mJ-gsS" secondAttribute="leading" constant="10" id="CZH-td-L1s"/>
+                            <constraint firstItem="NN5-5j-ffs" firstAttribute="top" secondItem="tZT-mJ-gsS" secondAttribute="top" id="E0A-ji-aKd"/>
+                            <constraint firstItem="U15-sI-xMP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="tZT-mJ-gsS" secondAttribute="leading" constant="150" id="EOF-l5-XTz"/>
+                            <constraint firstItem="t1T-5t-gqf" firstAttribute="top" secondItem="NN5-5j-ffs" secondAttribute="bottom" constant="40" id="XsN-KH-54I"/>
+                            <constraint firstItem="NN5-5j-ffs" firstAttribute="trailing" secondItem="tZT-mJ-gsS" secondAttribute="trailing" id="eoM-7D-MgV"/>
+                            <constraint firstItem="tZT-mJ-gsS" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="U15-sI-xMP" secondAttribute="trailing" constant="150" id="k9q-Qt-idg"/>
+                            <constraint firstItem="tZT-mJ-gsS" firstAttribute="trailing" secondItem="t1T-5t-gqf" secondAttribute="trailing" constant="10" id="pn7-es-K5v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Sv-qw-0RR"/>
+                    <connections>
+                        <outlet property="imgViewIDCheck" destination="7DR-ez-C8m" id="86y-oE-I65"/>
+                        <outlet property="lblIDCheck" destination="2i5-gK-O0C" id="XiI-Yi-UWt"/>
+                        <outlet property="tfIDtoChange" destination="ew3-Y0-Jo9" id="36s-ze-gFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZb-OR-FQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="1601.6587677725117"/>
         </scene>
         <!--FAQ-->
         <scene sceneID="kQT-aI-VNb">
@@ -1260,6 +1366,7 @@
         <image name="exclamationmark.bubble" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="minus.square" catalog="system" width="128" height="114"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="tray.full" catalog="system" width="128" height="88"/>

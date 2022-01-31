@@ -11,9 +11,9 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
     @IBOutlet weak var viewRegisterBorder: UIView!
     
-    @IBOutlet var tfRegisterID: UITextField!
-    @IBOutlet var tfRegisterPW: UITextField!
-    @IBOutlet var tfRegisterPWDoubleCheck: UITextField!
+    @IBOutlet var tfIDtoRegister: UITextField!
+    @IBOutlet var tfPWtoRegister: UITextField!
+    @IBOutlet var tfPWtoDoubleCheck: UITextField!
     @IBOutlet var lblIDCheck: UILabel!
     @IBOutlet var lblPWCheck: UILabel!
     @IBOutlet var lblPWDoubleCheck: UILabel!
@@ -46,9 +46,9 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
         self.agePicker.delegate = self
         self.agePicker.dataSource = self
-        self.tfRegisterID.delegate = self
-        self.tfRegisterPW.delegate = self
-        self.tfRegisterPWDoubleCheck.delegate = self
+        self.tfIDtoRegister.delegate = self
+        self.tfPWtoRegister.delegate = self
+        self.tfPWtoDoubleCheck.delegate = self
         
         imgViewIDCheck.image = UIImage(systemName: "xmark.square")
         imgViewIDCheck.tintColor = UIColor.systemRed
@@ -74,7 +74,7 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func checkIDPW(textField : UITextField){
         
-        if textField == tfRegisterID {
+        if textField == tfIDtoRegister {
             let IDField = textField
             if IDCheck(ID: IDField.text) == true {
                 /*
@@ -94,7 +94,7 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
                 imgViewIDCheck.tintColor = UIColor.systemRed
                 isIDAvailable = false
             }
-        } else if textField == tfRegisterPW {
+        } else if textField == tfPWtoRegister {
             let PWField = textField
             if PWCheck(PW: PWField.text) == true {
                 lblPWCheck.text = "사용 가능한 비밀번호입니다."
@@ -115,15 +115,15 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
                 imgViewPWDoubleCheck.tintColor = UIColor.systemRed
                 isPWDoubleChecked = false
             }
-        } else if textField == tfRegisterPWDoubleCheck {
+        } else if textField == tfPWtoDoubleCheck {
             let PWDoubleCheckField = textField
-            if isPWAvailable == true && PWDoubleCheckField.text == tfRegisterPW.text {
+            if isPWAvailable == true && PWDoubleCheckField.text == tfPWtoRegister.text {
                 lblPWDoubleCheck.text = "비밀번호가 동일합니다."
                 lblPWDoubleCheck.textColor = UIColor.systemGreen
                 imgViewPWDoubleCheck.image = UIImage(systemName: "checkmark.square")
                 imgViewPWDoubleCheck.tintColor = UIColor.systemGreen
                 isPWDoubleChecked = true
-            } else if isPWAvailable == true && PWDoubleCheckField.text != tfRegisterPW.text {
+            } else if isPWAvailable == true && PWDoubleCheckField.text != tfPWtoRegister.text {
                 lblPWDoubleCheck.text = "비밀번호가 일치하지 않습니다."
                 lblPWDoubleCheck.textColor = UIColor.systemRed
                 imgViewPWDoubleCheck.image = UIImage(systemName: "xmark.square")
@@ -195,7 +195,7 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     @IBAction func btnRegister(_ sender: UIButton) {
         
-        if isIDAvailable == true && isPWAvailable == true{
+        if isIDAvailable == true && isPWAvailable == true {
             if isPWDoubleChecked == true {
                 /*
                  FutureUpdate = selectedAge를 userAge에 저장
@@ -203,7 +203,7 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
                  selectedSex, selectedAge를 새로 등록
                 */
                 
-                let userName = tfRegisterID.text
+                let userName = tfIDtoRegister.text
                 let successAlert = UIAlertController(title: "회원가입 성공!", message:  "\(userName!)님, 성공적으로 회원가입되었습니다!", preferredStyle: .alert)
                 let actionGoLogin = UIAlertAction(title: "로그인 화면으로 이동", style: .default) { UIAlertAction in
                     self.presentingViewController?.dismiss(animated: true)
