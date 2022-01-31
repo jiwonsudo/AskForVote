@@ -55,7 +55,7 @@ class IDChangeVC: UIViewController, UITextFieldDelegate {
                 isIDAvailable = true
                 isIDModified = true
             } else if IDCheck(ID: IDField.text) == false && IDField.text != loginedID {
-                lblIDCheck.text = "ID가 조건에 맞지 않습니다. (4~20자리, 영어 소문자, 숫자, 언더바(_) 사용 가능)"
+                lblIDCheck.text = "ID가 조건에 맞지 않습니다. \n (4~20자리, 영어 소문자, 숫자, 언더바(_) 사용 가능)"
                 lblIDCheck.textColor = UIColor.systemRed
                 imgViewIDCheck.image = UIImage(systemName: "xmark.square")
                 imgViewIDCheck.tintColor = UIColor.systemRed
@@ -102,8 +102,11 @@ class IDChangeVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnChangeID(_ sender: UIButton) {
         
-        let actionOK = UIAlertAction(title: "확인", style: .default) { UIAlertAction in
-            self.presentingViewController?.dismiss(animated: true)
+        let actionOK = UIAlertAction(title: "확인", style: .default) { (action) in
+        }
+        
+        let actionGoProfile = UIAlertAction(title: "프로필 화면으로 이동", style: .default) { (action) in
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
         
         if isIDAvailable == true && isIDModified == true {
@@ -116,7 +119,7 @@ class IDChangeVC: UIViewController, UITextFieldDelegate {
             loginedID = modifiedID!
             
             let successAlert = UIAlertController(title: "변경 성공", message:  "성공적으로 변경되었습니다. \n 새 아이디: \(modifiedID!)", preferredStyle: .alert)
-            successAlert.addAction(actionOK)
+            successAlert.addAction(actionGoProfile)
             present(successAlert, animated: true, completion: nil)
         } else if isIDAvailable == true && isIDModified == false {
             let notModifiedAlert = UIAlertController(title: "사용자명 유지", message: "기존 사용자명을 변경하지 않고 '변경하기'를 누르셨습니다. 사용자명이 유지됩니다.", preferredStyle: .alert)

@@ -10,13 +10,14 @@ import UIKit
 class ProfileVC: UIViewController {
     
     @IBOutlet var imgViewProfile: UIImageView!
-    @IBOutlet var lblUserID: UILabel! // 유저ID 표시 기능
+    @IBOutlet weak var lblUserID: UILabel! // 유저ID 표시 기능
     @IBOutlet var btnLogOut: UIButton!
     
     let imagePicker = UIImagePickerController() //이미지 선택 기능
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         lblUserID.text = loginedID
         
         imagePicker.delegate = self
