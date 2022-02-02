@@ -54,6 +54,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         if (inputID == "test") && (inputPW == "test") { // FutureUpdate 서버에서 inputID와 inputPW가 일치하는 것이 있는지 확인
             isLogin = true
+            loginedID = inputID
+            loginedPW = inputPW
             lblLoginAlert.text = "로그인에 성공했습니다. 메인화면으로 이동합니다."
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.7) {
                 self.presentingViewController?.dismiss(animated: true)

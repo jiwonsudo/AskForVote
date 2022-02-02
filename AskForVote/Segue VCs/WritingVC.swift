@@ -55,6 +55,10 @@ class WritingVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func switchAnonymousQ(_ sender: UISwitch) {
         if sender.isOn {
             isAnonymousQ = true

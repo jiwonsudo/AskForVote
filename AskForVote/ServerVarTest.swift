@@ -30,3 +30,20 @@ var loginedID = "test" // 앱에 저장되는 로그인된 ID
 var loginedPW = "test" // DB에 있는 ID 중 선택된 로그인된 유저의 PW
 var loginedSex = "남성" // 로그인한 유저의 성별 정보 : 남성, 여성, 기타
 var loginedAge = "10대" // 유저의 연령대 정보 : ["10대", "20대", "30대", "40대", "50대", "60대 또는 그 이상"]
+var numToAlert = 10 // 서버로 넘겨줄 알림 설정 수 정보
+var setVoteAlert = false // 서버로 넘겨줄 알림 설정 여부 정보
+
+/* 로그인 안되어 있을 시 로그인 유도 함수
+ func notLoginedYet(){
+     let notLoginedAlert = UIAlertController(title: "로그인 알림", message: "로그인을 먼저 진행해 주세요.", preferredStyle: .alert)
+     let actionGoLogin = UIAlertAction(title: "로그인 창으로 이동", style: .default, handler: {(action) in
+         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {return}
+         nextVC.modalPresentationStyle = .fullScreen
+         self.present(nextVC, animated: true, completion: nil)
+     })
+     let actionCancle = UIAlertAction(title: "취소", style: .default, handler: {(action) in})
+     notLoginedAlert.addAction(actionCancle)
+     notLoginedAlert.addAction(actionGoLogin)
+     present(notLoginedAlert, animated: true, completion: nil)
+ }
+ */

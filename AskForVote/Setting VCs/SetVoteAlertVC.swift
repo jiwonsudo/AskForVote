@@ -7,9 +7,6 @@
 
 import UIKit
 
-var numToAlert = 10 // 서버로 넘겨줄 알림 설정 수 정보
-var setVoteAlert = false // 서버로 넘겨줄 알림 설정 여부 정보
-
 class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var viewLabelborder: UIView!
@@ -72,9 +69,17 @@ class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
         if sender.isOn {
             setVoteAlert = true
             lblNumToAlert.text = String(numToAlert)
+            /*
+             FutureUpdate
+             알림 여부(Bool) = true 송신
+             */
         } else {
             setVoteAlert = false
             lblNumToAlert.text = "꺼짐"
+            /*
+             FutureUpdate
+             알림 여부(Bool) = false 송신
+             */
         }
     }
     
@@ -89,6 +94,10 @@ class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
                 tfNumToChange.text = ""
                 
                 self.view.endEditing(true)
+                /*
+                 FutureUpdate
+                 서버로 알림 수 = true 송신
+                 */
                 
                 let alertSetSucess = UIAlertController(title: "알림", message: "성공적으로 반영되었습니다.", preferredStyle: .alert)
                 alertSetSucess.addAction(actionOK)
@@ -99,6 +108,11 @@ class SetVoteAlertVC: UIViewController, UITextFieldDelegate {
                 tfNumToChange.text = ""
                 setVoteAlert = false
                 switchVoteAlert.setOn(false, animated: false)
+                
+                /*
+                 FutureUpdate
+                 서버로 알림 여부(Bool) = false 송신
+                 */
                 
                 self.view.endEditing(true)
                 

@@ -26,6 +26,10 @@ class SettingVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
     @IBAction func switchProfileSearchable(_ sender: UISwitch) {
         if sender.isOn {profileSearchable = true} else {profileSearchable = false}
     }

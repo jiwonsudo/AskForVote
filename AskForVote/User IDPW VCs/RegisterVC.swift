@@ -20,7 +20,7 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var imgViewPWCheck: UIImageView!
     @IBOutlet weak var imgViewIDCheck: UIImageView!
     @IBOutlet weak var imgViewPWDoubleCheck: UIImageView!
-    @IBOutlet weak var agePicker: UIPickerView!
+    @IBOutlet weak var pkViewAge: UIPickerView!
     
     let age = ["10대", "20대", "30대", "40대", "50대", "60대 또는 그 이상"]
     var selectedAge = "10대"
@@ -44,8 +44,8 @@ class RegisterVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         viewRegisterBorder.layer.borderColor = UIColor.systemGray5.cgColor
         viewRegisterBorder.layer.cornerRadius = 10
         
-        self.agePicker.delegate = self
-        self.agePicker.dataSource = self
+        self.pkViewAge.delegate = self
+        self.pkViewAge.dataSource = self
         self.tfRegisterID.delegate = self
         self.tfRegisterPW.delegate = self
         self.tfRegisterPWDoubleCheck.delegate = self

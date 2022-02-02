@@ -27,8 +27,6 @@
 		8796D5C9279858A800C66436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8796D5C7279858A800C66436 /* LaunchScreen.storyboard */; };
 		879F3C3B27A5737200517A34 /* ServerVarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879F3C3A27A5737200517A34 /* ServerVarTest.swift */; };
 		87D5E87C27A3CA7500E8199A /* ResignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87B27A3CA7500E8199A /* ResignVC.swift */; };
-		87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87D27A3CA8000E8199A /* FAQVC.swift */; };
-		87D5E88027A3CA8900E8199A /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5E87F27A3CA8900E8199A /* ReportVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +55,6 @@
 		8796D5CA279858A800C66436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879F3C3A27A5737200517A34 /* ServerVarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServerVarTest.swift; path = AskForVote/ServerVarTest.swift; sourceTree = SOURCE_ROOT; };
 		87D5E87B27A3CA7500E8199A /* ResignVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignVC.swift; sourceTree = "<group>"; };
-		87D5E87D27A3CA8000E8199A /* FAQVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
-		87D5E87F27A3CA8900E8199A /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +139,6 @@
 			children = (
 				876D7A5F27A3AE2100A522B3 /* SetVoteAlertVC.swift */,
 				877802D027991EBD00627CA7 /* SettingVC.swift */,
-				87D5E87F27A3CA8900E8199A /* ReportVC.swift */,
-				87D5E87D27A3CA8000E8199A /* FAQVC.swift */,
 				87D5E87B27A3CA7500E8199A /* ResignVC.swift */,
 			);
 			path = "Setting VCs";
@@ -226,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				877802CD27991CEF00627CA7 /* WritingVC.swift in Sources */,
-				87D5E88027A3CA8900E8199A /* ReportVC.swift in Sources */,
 				87D5E87C27A3CA7500E8199A /* ResignVC.swift in Sources */,
 				879F3C3B27A5737200517A34 /* ServerVarTest.swift in Sources */,
 				877802D127991EBD00627CA7 /* SettingVC.swift in Sources */,
@@ -234,7 +227,6 @@
 				877802CF27991D1100627CA7 /* SearchVC.swift in Sources */,
 				8796D5C1279858A700C66436 /* MainMenuVC.swift in Sources */,
 				8796D5BD279858A700C66436 /* AppDelegate.swift in Sources */,
-				87D5E87E27A3CA8000E8199A /* FAQVC.swift in Sources */,
 				877802D727991F4C00627CA7 /* LoginVC.swift in Sources */,
 				877802D327991EEC00627CA7 /* NCCenterVC.swift in Sources */,
 				877802D527991F2100627CA7 /* MyQVC.swift in Sources */,
