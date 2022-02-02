@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -136,7 +137,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(익명 게시판에 글이 등록됩니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-7G-bTm">
                                                 <rect key="frame" x="15" y="36.666666666666629" width="221" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="익명으로 질문하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpu-W2-Utg">
@@ -152,7 +153,7 @@
                                                 </connections>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstItem="kh8-7G-bTm" firstAttribute="leading" secondItem="LpE-wB-Xow" secondAttribute="leading" constant="15" id="4xx-fE-gYK"/>
                                             <constraint firstAttribute="height" constant="70" id="FDf-hP-Oly"/>
@@ -171,7 +172,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Off 시 질문이 검색되지 않습니다.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-Hs-zFV">
                                                 <rect key="frame" x="15" y="36.666666666666629" width="235" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문 검색 허용하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2U-HD-uoU">
@@ -187,7 +188,7 @@
                                                 </connections>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstItem="SGx-O5-GdP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7jl-Hs-zFV" secondAttribute="trailing" constant="8" symbolic="YES" id="33T-5P-JlO"/>
                                             <constraint firstItem="k2U-HD-uoU" firstAttribute="top" secondItem="28B-xZ-s68" secondAttribute="top" constant="13" id="3ar-aI-oQc"/>
@@ -288,7 +289,7 @@
                                             <constraint firstAttribute="height" constant="80" id="cCt-tZ-GoI"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-uI-0cc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-uI-0cc">
                                         <rect key="frame" x="80" y="110" width="190" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="L6M-x5-4Ua"/>
@@ -410,6 +411,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgViewLogo" destination="wQQ-uI-0cc" id="Ngc-Lb-3u4"/>
                         <outlet property="lblLoginAlert" destination="o9x-y3-8tm" id="6zr-qZ-Y2P"/>
                         <outlet property="tfID" destination="lHf-wC-lqI" id="KUB-Tb-4Fi"/>
                         <outlet property="tfPW" destination="B80-M0-qGv" id="4pL-m2-TEA"/>
@@ -581,7 +583,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 검색이 허용됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-8i-4L7">
                                                 <rect key="frame" x="15" y="36.666666666666657" width="175.33333333333334" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 프로필 검색 허용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY2-VF-n4W">
@@ -597,7 +599,7 @@
                                                 </connections>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstItem="fWW-8i-4L7" firstAttribute="leading" secondItem="7WM-NQ-Spn" secondAttribute="leading" constant="15" id="Gaf-6A-p5N"/>
                                             <constraint firstAttribute="height" constant="70" id="Gle-Yl-JNC"/>
@@ -616,7 +618,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택된 수만큼 투표될 경우 알림을 줍니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-m4-UdA">
                                                 <rect key="frame" x="15" y="36.666666666666657" width="276.66666666666669" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 수 알림 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHz-mR-s8C">
@@ -630,14 +632,14 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="설정">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="btnSetVoteAlert:" destination="hfp-KI-tmn" eventType="touchUpInside" id="IA6-TQ-41l"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="mA2-m4-UdA" secondAttribute="bottom" constant="13" id="5wq-pn-eCq"/>
                                             <constraint firstAttribute="height" constant="70" id="9MR-Zp-p6k"/>
@@ -751,7 +753,7 @@
                                                 <rect key="frame" x="229.66666666666669" y="0.0" width="48.333333333333314" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="변경">
-                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="btnChangeNum:" destination="9DN-jA-5Ph" eventType="touchUpInside" id="gT0-mq-V33"/>
@@ -769,7 +771,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off 시 투표 수 알림을 받지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnK-Ye-jig">
                                                 <rect key="frame" x="15" y="39" width="218.66666666666666" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 수 알림 켜기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1W-cx-yaI">
@@ -786,7 +788,7 @@
                                                 </connections>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="1YJ-lU-zJc"/>
                                             <constraint firstItem="F2W-Z6-xHL" firstAttribute="top" secondItem="MZV-GE-Tx4" secondAttribute="top" constant="20" id="Anw-bx-EHD"/>
@@ -1397,7 +1399,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TestLogo.png" width="1000" height="1000"/>
+        <image name="1024.png" width="1024" height="1024"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
@@ -1409,6 +1411,9 @@
         <image name="tray.full" catalog="system" width="128" height="88"/>
         <image name="xmark.shield" catalog="system" width="128" height="118"/>
         <image name="xmark.square" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.23137254901960785" green="0.75686274509803919" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

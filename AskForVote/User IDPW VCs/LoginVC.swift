@@ -12,6 +12,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var lblLoginAlert: UILabel!
     @IBOutlet var tfID: UITextField!
     @IBOutlet var tfPW: UITextField!
+    @IBOutlet weak var imgViewLogo: UIImageView!
     
     let maxTFLength = 20
     
@@ -23,6 +24,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.tfID.delegate = self
         self.tfPW.delegate = self
+        
+        imgViewLogo.image = UIImage(named: "1024")
+        imgViewLogo.layer.cornerRadius = 20
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
