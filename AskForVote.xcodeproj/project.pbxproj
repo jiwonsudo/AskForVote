@@ -31,6 +31,7 @@
 		878AA87827AAE58300A1D8BE /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 878AA86C27AAE58300A1D8BE /* 80.png */; };
 		878AA87927AAE58300A1D8BE /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 878AA86D27AAE58300A1D8BE /* 40.png */; };
 		878AA87A27AAE58300A1D8BE /* 87.png in Resources */ = {isa = PBXBuildFile; fileRef = 878AA86E27AAE58300A1D8BE /* 87.png */; };
+		878AA87C27AAEA5200A1D8BE /* Vote_OpeningView.png in Resources */ = {isa = PBXBuildFile; fileRef = 878AA87B27AAEA5200A1D8BE /* Vote_OpeningView.png */; };
 		8796D5BD279858A700C66436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796D5BC279858A700C66436 /* AppDelegate.swift */; };
 		8796D5BF279858A700C66436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796D5BE279858A700C66436 /* SceneDelegate.swift */; };
 		8796D5C1279858A700C66436 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8796D5C0279858A700C66436 /* MainMenuVC.swift */; };
@@ -69,6 +70,7 @@
 		878AA86C27AAE58300A1D8BE /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
 		878AA86D27AAE58300A1D8BE /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
 		878AA86E27AAE58300A1D8BE /* 87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 87.png; sourceTree = "<group>"; };
+		878AA87B27AAEA5200A1D8BE /* Vote_OpeningView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vote_OpeningView.png; sourceTree = "<group>"; };
 		8796D5B9279858A700C66436 /* AskForVote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskForVote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8796D5BC279858A700C66436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8796D5BE279858A700C66436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				878AA86C27AAE58300A1D8BE /* 80.png */,
 				878AA86D27AAE58300A1D8BE /* 40.png */,
 				878AA86E27AAE58300A1D8BE /* 87.png */,
+				878AA87B27AAEA5200A1D8BE /* Vote_OpeningView.png */,
 			);
 			name = voteAppIcon;
 			path = images/voteAppIcon;
@@ -251,6 +254,7 @@
 				878AA87527AAE58300A1D8BE /* 120.png in Resources */,
 				878AA87827AAE58300A1D8BE /* 80.png in Resources */,
 				878AA87227AAE58300A1D8BE /* 29.png in Resources */,
+				878AA87C27AAEA5200A1D8BE /* Vote_OpeningView.png in Resources */,
 				878AA87427AAE58300A1D8BE /* appstore.png in Resources */,
 				878AA87327AAE58300A1D8BE /* 114.png in Resources */,
 				878AA87927AAE58300A1D8BE /* 40.png in Resources */,
