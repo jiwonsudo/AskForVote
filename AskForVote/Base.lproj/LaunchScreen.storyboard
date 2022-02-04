@@ -19,10 +19,25 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote_OpeningView.png" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-KG-8Ld">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckY-Uv-bh2">
+                                <rect key="frame" x="140" y="771" width="110" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ⓒ 2022 by Jiwon Jeong">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="11" name="AppleSDGothicNeo-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ckY-Uv-bh2" secondAttribute="bottom" constant="25" id="9bc-kP-dtz"/>
+                            <constraint firstItem="ckY-Uv-bh2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DfB-Xn-cSj"/>
                             <constraint firstAttribute="bottom" secondItem="t1m-KG-8Ld" secondAttribute="bottom" id="IDP-qZ-X5x"/>
                             <constraint firstItem="t1m-KG-8Ld" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IMd-Av-Wrf"/>
                             <constraint firstItem="t1m-KG-8Ld" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="K7i-O8-AHH"/>

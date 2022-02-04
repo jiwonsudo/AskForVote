@@ -668,16 +668,31 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rk-eI-GQC">
+                                <rect key="frame" x="94.000000000000014" y="770.33333333333337" width="202.33333333333337" height="14.666666666666629"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ⓒ 2022. Jiwon Jeong All rights reserved.">
+                                        <attributes>
+                                            <color key="NSColor" name="AccentColor"/>
+                                            <font key="NSFont" size="12" name="AppleSDGothicNeo-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FJh-5h-Luv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="B1H-kt-KJs" firstAttribute="top" secondItem="FJh-5h-Luv" secondAttribute="top" id="05c-fl-Dfb"/>
                             <constraint firstItem="bIf-BH-bsO" firstAttribute="top" secondItem="B1H-kt-KJs" secondAttribute="bottom" constant="20" id="0Fx-B4-UxV"/>
+                            <constraint firstItem="4rk-eI-GQC" firstAttribute="centerX" secondItem="Ju3-Bi-gPY" secondAttribute="centerX" id="IgJ-me-FWH"/>
                             <constraint firstItem="FJh-5h-Luv" firstAttribute="trailing" secondItem="bIf-BH-bsO" secondAttribute="trailing" constant="16" id="ROd-i9-Ywu"/>
                             <constraint firstItem="bIf-BH-bsO" firstAttribute="leading" secondItem="FJh-5h-Luv" secondAttribute="leading" constant="16" id="S4I-nO-sSS"/>
                             <constraint firstItem="B1H-kt-KJs" firstAttribute="trailing" secondItem="FJh-5h-Luv" secondAttribute="trailing" id="aMh-zb-gn1"/>
                             <constraint firstItem="B1H-kt-KJs" firstAttribute="leading" secondItem="FJh-5h-Luv" secondAttribute="leading" id="hLA-AH-W3v"/>
+                            <constraint firstItem="FJh-5h-Luv" firstAttribute="bottom" secondItem="4rk-eI-GQC" secondAttribute="bottom" constant="25" id="izn-sg-ZWQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="tV1-xa-Z3n"/>
