@@ -289,7 +289,7 @@
                                             <constraint firstAttribute="height" constant="80" id="cCt-tZ-GoI"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-uI-0cc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-uI-0cc">
                                         <rect key="frame" x="80" y="110" width="190" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="L6M-x5-4Ua"/>
@@ -1417,7 +1417,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1024.png" width="1024" height="1024"/>
+        <image name="TestLogo.png" width="1000" height="1000"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
